@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1 class="libro-heading">
+            LibroSphere<br>
+            <span class="tagline">– A world of books in one system.</span>
+        </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#" id="home-link"><i class="fas fa-home"></i> Home</a></li>
+            <li id="logout-li" class="hidden"><a href="#" id="logout-button"><i class="fas fa-sign-out-alt"></i>Logout</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="user-selection">
+            <h2>Welcome! Are you a:</h2>
+            <button id="student-button"><i class="fas fa-user-graduate"></i> Student</button>
+            <button id="librarian-button"><i class="fas fa-user-tie"></i> Librarian</button>
+        </section>
+
+        <section id="login-section" class="hidden">
+            <h2>Login</h2>
+            <form id="login-form">
+                <label for="login-username">Username:</label>
+                <input type="text" id="login-username" name="login-username" required><br><br>
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="login-password" required><br><br>
+                <button type="submit">Login</button>
+            </form>
+        </section>
+
+        <section id="register-section" class="hidden">
+            <h2>Register</h2>
+            <form id="register-form">
+                <label for="register-username">Username:</label>
+                <input type="text" id="register-username" name="register-username" required><br><br>
+                <label for="register-password">Password:</label>
+                <input type="password" id="register-password" name="register-password" required><br><br>
+                <label for="register-name">Name:</label>
+                <input type="text" id="register-name" name="register-name" required><br><br>
+                <label for="register-contact">Contact:</label>
+                <input type="text" id="register-contact" name="register-contact" required><br><br>
+                <button type="submit">Register</button>
+            </form>
+        </section>
+
+        <section id="book-search" class="hidden">
+            <h2>Book Search</h2>
+            <label for="search-term">Search Term:</label>
+            <input type="text" id="search-term" placeholder="Enter book title or author">
+            <button id="search-button">Search</button>
+
+            <div id="search-results">
+                <!-- Search results will be displayed here -->
+            </div>
+        </section>
+
+        <section id="book-list" class="hidden">
+            <h2>Book List</h2>
+
+            <!-- Department Filter -->
+            <label for="department-filter">Filter by Department:</label>
+            <select id="department-filter">
+                <option value="">All Departments</option>
+                <option value="Literature">Literature</option>
+                <option value="Science">Science</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="History">History</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Fiction">Fiction</option>
+                <!-- Add more department options as needed -->
+            </select>
+
+            <div id="book-list-container">
+                <!-- Book lists will be dynamically added here -->
+            </div>
+        </section>
+
+        <section id="borrow-return" class="hidden">
+            <h2>Borrow / Return</h2>
+            <label for="borrow-isbn">ISBN:</label>
+            <input type="text" id="borrow-isbn" placeholder="Enter ISBN to borrow/return">
+            <button id="borrow-button">Borrow</button>
+            <button id="return-button">Return</button>
+        </section>
+
+        <section id="librarian-dashboard" class="hidden">
+            <h2>Librarian Dashboard</h2>
+            <h3>Add Book</h3>
+            <label for="add-title">Title:</label>
+            <input type="text" id="add-title"><br><br>
+            <label for="add-author">Author:</label>
+            <input type="text" id="add-author"><br><br>
+            <label for="add-isbn">ISBN:</label>
+            <input type="text" id="add-isbn"><br><br>
+            <label for="add-department">Department:</label>
+            <select id="add-department">
+                <option value="Literature">Literature</option>
+                <option value="Science">Science</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="History">History</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Fiction">Fiction</option>
+                <!-- Add more department options as needed -->
+            </select><br><br>
+            <button id="add-book-button">Add Book</button>
+
+            <h3>Edit Book</h3>
+            <label for="edit-isbn">ISBN to Edit:</label>
+            <input type="text" id="edit-isbn"><br><br>
+            <label for="edit-title">New Title:</label>
+            <input type="text" id="edit-title"><br><br>
+            <label for="edit-author">New Author:</label>
+            <input type="text" id="edit-author"><br><br>
+            <label for="edit-department">New Department:</label>
+            <select id="edit-department">
+                <option value="Literature">Literature</option>
+                <option value="Science">Science</option>
+                <option value="Computer Science">Computer Science</option>
+                <option value="History">History</option>
+                <option value="Mathematics">Mathematics</option>
+                <option value="Fiction">Fiction</option>
+                <!-- Add more department options as needed -->
+            </select><br><br>
+            <button id="edit-book-button">Edit Book</button>
+
+            <h3>Delete Book</h3>
+            <label for="delete-isbn">ISBN to Delete:</label>
+            <input type="text" id="delete-isbn"><br><br>
+            <button id="delete-book-button">Delete Book</button>
+
+            <h3>Display Books</h3>
+            <button id="display-books-button">Display All Books</button>
+            <div id="display-books-area">
+                <!-- Book list will be dynamically added here -->
+            </div>
+
+            <h3>Add Department</h3>
+            <label for="add-department-name">Department Name:</label>
+            <input type="text" id="add-department-name"><br><br>
+            <button id="add-department-button">Add Department</button>
+        </section>
+
+        <section id="fine-management" class="hidden">
+            <h2>Fine Management</h2>
+            <label for="user-id">User ID:</label>
+            <input type="text" id="user-id">
+            <button id="check-fines-button">Check Fines</button>
+            <p id="fine-amount">Fine Amount: $0.00</p>
+
+             <h3>Manage Fines</h3>
+            <label for="manage-fine-username">Username:</label>
+            <input type="text" id="manage-fine-username">
+            <label for="manage-fine-amount">Amount:</label>
+            <input type="number" id="manage-fine-amount" step="0.01">
+            <button id="add-fine-button">Add Fine</button>
+            <button id="deduct-fine-button">Deduct Fine</button>
+        </section>
+
+        <section id="borrowed-books" class="hidden">
+            <h2>Borrowed Books</h2>
+            <ul id="borrowed-books-list">
+                <!-- Borrowed books will be displayed here -->
+            </ul>
+        </section>
+
+        <section id="notification" class="hidden">
+            <p id="notification-message"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2024 LibroSphere. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

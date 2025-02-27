@@ -1,0 +1,594 @@
+/* Modern Font Theme */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+/* Enhanced CSS Styling */
+:root {
+    --primary-color: #6c63ff;
+    /* Vibrant Purple */
+    --secondary-color: #ff4081;
+    /* Electric Pink */
+    --accent-color: #00bcd4;
+    /* Teal Accent */
+    --light-bg: #f3e5f5;
+    /* Light Lavender */
+    --text-color: #37474f;
+    /* Dark Grayish Blue */
+    --light-text: #ffffff;
+    /* White */
+    --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    /* Enhanced Shadow */
+    --font-family: 'Nunito', sans-serif;
+    --h1-font-size: 3rem;
+    --h2-font-size: 2.4rem;
+    --h3-font-size: 1.8rem;
+    --normal-font-size: 1.1rem;
+}
+
+body {
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+    line-height: 1.8;
+    /* Increased line height */
+    transition: background-color 0.4s ease;
+    font-size: var(--normal-font-size);
+    overflow-x: hidden;
+    /* Prevent horizontal scrollbar */
+    background-image: radial-gradient(circle, rgba(255, 64, 129, 0.05), transparent);
+    /* Subtle Background */
+}
+
+h1 {
+    font-size: var(--h1-font-size);
+    font-weight: 700;
+    /* Bold Header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
+    /* Subtle Text Shadow */
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55), color 0.5s ease;
+    /* Peak Transition */
+}
+
+h1:hover {
+    transform: translateY(-5px) scale(1.1);
+    /* Enhanced Hover */
+    color: var(--accent-color);
+}
+
+h2 {
+    font-size: var(--h2-font-size);
+    color: var(--primary-color);
+    transition: color 0.4s ease;
+}
+
+h2:hover {
+    color: var(--secondary-color);
+}
+
+h3 {
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 2.5em 0;
+    /* Increased padding */
+    text-align: center;
+    box-shadow: var(--box-shadow);
+    border-bottom: 5px solid var(--secondary-color);
+    /* Border Accent */
+}
+
+nav {
+    background-color: var(--secondary-color);
+    box-shadow: var(--box-shadow);
+    font-size: 1.2rem;
+    /* Increased font size */
+    transition: transform 0.3s ease;
+}
+
+nav:hover {
+    transform: scale(1.03);
+}
+
+nav ul {
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav li {
+    flex: 1;
+    transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    /* Peak Transition */
+}
+
+nav li:hover {
+    transform: translateY(-7px);
+}
+
+nav a {
+    display: block;
+    color: var(--light-text);
+    text-align: center;
+    padding: 1.3em;
+    /* Increased padding */
+    text-decoration: none;
+    transition: background-color 0.4s ease, color 0.4s ease;
+    border-radius: 7px;
+}
+
+nav a:hover {
+    background-color: rgba(0, 0, 0, 0.15);
+    color: var(--light-text);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+main {
+    padding: 30px;
+    /* Increased padding */
+}
+
+section {
+    background-color: var(--light-text);
+    /* Pure white for contrast */
+    padding: 2.5em;
+    /* Increased padding */
+    margin-bottom: 2.5em;
+    /* Increased margin */
+    border-radius: 15px;
+    /* More rounded corners */
+    box-shadow: var(--box-shadow);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+    /* Peak Transition */
+    border: 2px solid rgba(0, 0, 0, 0.05);
+    /* Subtle Border */
+}
+
+section:hover {
+    transform: translateY(-7px);
+    /* More pronounced lift */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    /* More pronounced shadow */
+}
+
+.hidden {
+    display: none;
+}
+
+/* Form Styles */
+form label {
+    display: block;
+    margin-bottom: 0.7em;
+    /* Increased margin */
+    font-weight: 600;
+    /* Semi-bold */
+    color: var(--text-color);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    /* Subtle Text Shadow */
+    transition: color 0.4s ease, transform 0.3s ease;
+    /* Peak Transition */
+}
+
+form label:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+form input[type="text"],
+form input[type="password"],
+form select {
+    width: 100%;
+    padding: 1.1em;
+    /* Increased padding */
+    margin-bottom: 1.7em;
+    /* Increased margin */
+    border: 2px solid #cbd5e1;
+    /* Gray 300 */
+    border-radius: 10px;
+    /* More rounded corners */
+    box-sizing: border-box;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    font-size: var(--normal-font-size);
+}
+
+form input[type="text"]:focus,
+form input[type="password"]:focus,
+form select:focus {
+    border-color: var(--secondary-color);
+    outline: none;
+    box-shadow: 0 0 9px rgba(255, 64, 129, 0.4);
+    /* Pink 200 */
+}
+
+/* Button Styles */
+button {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1.2em 1.8em;
+    /* Increased padding */
+    border: none;
+    border-radius: 10px;
+    /* More rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Button Shadow */
+    transition: background-color 0.4s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.4s ease;
+    /* Peak Transition */
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px) scale(1.1);
+    /* Enhanced Hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Enhanced Search Button Styling */
+#search-button {
+    background-color: var(--accent-color);
+    /* Teal 500 */
+    color: var(--light-text);
+    padding: 1.2em 2em;
+    /* Increased padding */
+    border-radius: 12px;
+    /* Even more rounded corners */
+    font-size: 1.3rem;
+    /* Further increased font size */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    /* Enhanced shadow */
+    transition: background-color 0.4s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.4s ease;
+    /* Peak Transition */
+}
+
+#search-button:hover {
+    background-color: #26a69a;
+    /* Teal 600 */
+    transform: translateY(-6px) scale(1.1);
+    /* Slightly more pronounced lift */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.3);
+    /* Even stronger shadow */
+}
+
+/* Enhanced Select Styles */
+select {
+    appearance: none;
+    /* Remove default arrow */
+    background-color: var(--light-text);
+    /* Pure white */
+    border: 2px solid #94a3b8;
+    /* Gray 400 */
+    border-radius: 10px;
+    /* More rounded corners */
+    padding: 1em 3.5em 1em 1.2em;
+    /* Adjust padding to accommodate custom arrow */
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+    cursor: pointer;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    background-image:
+        url('data:image/svg+xml;utf8,<svg fill="%23777" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4 5"><path d="M0 0l4 0l-2 5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 1.2em top 50%, 0 0;
+    background-size: 0.9em auto, 100%;
+}
+
+select:hover {
+    border-color: var(--secondary-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+    /* Teal Shadow */
+}
+
+/* Notification */
+#notification {
+    position: fixed;
+    top: 40px;
+    /* Increased spacing */
+    right: 40px;
+    /* Increased spacing */
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 1.4em 1.7em;
+    /* Increased padding */
+    border-radius: 12px;
+    /* More rounded corners */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    /* Enhanced Shadow */
+    z-index: 1000;
+    font-size: var(--normal-font-size);
+    animation: slideIn 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), fadeOut 2.5s linear 3.5s forwards;
+    /* Enhanced Animation */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(120%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2em;
+    /* Increased padding */
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    box-shadow: var(--box-shadow);
+    font-size: 1rem;
+    /* Slightly smaller font size */
+}
+
+/* List Styles */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    padding: 1.2em 0;
+    /* Increased padding */
+    border-bottom: 1.5px solid #e0e0e0;
+    /* Gray 200 */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+ul li:hover {
+    transform: translateX(5px);
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav li {
+        flex: none;
+    }
+}
+
+/* Enhanced Librarian Dashboard Styles */
+#librarian-dashboard h3 {
+    color: var(--accent-color);
+    margin-bottom: 1.2em;
+    /* Increased margin */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+#librarian-dashboard label {
+    font-weight: 600;
+    /* Semi-bold */
+    color: var(--text-color);
+    display: block;
+    margin-bottom: 0.6em;
+    /* Increased margin */
+    transition: color 0.4s ease, transform 0.3s ease;
+    /* Peak Transition */
+}
+
+#librarian-dashboard label:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+#librarian-dashboard input[type="text"],
+#librarian-dashboard select {
+    width: 100%;
+    padding: 1em;
+    /* Increased padding */
+    margin-bottom: 1.4em;
+    /* Increased margin */
+    border: 2px solid #9ca3af;
+    /* Gray 400 */
+    border-radius: 8px;
+    /* More rounded corners */
+    box-sizing: border-box;
+    font-size: var(--normal-font-size);
+}
+
+#librarian-dashboard input[type="text"]:focus,
+#librarian-dashboard select:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 9px rgba(0, 188, 212, 0.4);
+    /* Teal Shadow */
+}
+
+#librarian-dashboard button {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    padding: 1.1em 1.5em;
+    /* Increased padding */
+    border: none;
+    border-radius: 8px;
+    /* More rounded corners */
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Button Shadow */
+    transition: background-color 0.4s ease, transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.4s ease;
+    /* Peak Transition */
+}
+
+#librarian-dashboard button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-5px) scale(1.1);
+    /* Enhanced Hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Style for displaying books in the dashboard */
+#display-books-area {
+    margin-top: 2.5em;
+    /* Increased margin */
+    padding: 2em;
+    /* Increased padding */
+    border: 2px solid #cbd5e1;
+    /* Gray 300 */
+    border-radius: 10px;
+    /* More rounded corners */
+    background-color: #eceff1;
+    /* Gray 100 */
+    box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.1);
+    /* Inset Shadow */
+}
+
+/* Enhanced Input Styles (Search, ISBN, etc.) */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 1.2em;
+    /* Increased padding for better touch/click area */
+    margin-bottom: 1.7em;
+    /* Increased margin for spacing */
+    border: 2px solid #9ca3af;
+    /* Gray 400 - softer border color */
+    border-radius: 10px;
+    /* More rounded corners */
+    box-sizing: border-box;
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    font-size: var(--normal-font-size);
+    color: var(--text-color);
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-color: var(--accent-color);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.4);
+    /* Teal Shadow */
+}
+
+/* Styling for the user selection buttons */
+#user-selection {
+    text-align: center;
+}
+
+#user-selection button {
+    margin: 0 20px;
+    /* Add horizontal spacing between buttons */
+    padding: 1.3em 2em;
+    font-size: 1.3rem;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+    /* Peak Transition */
+}
+
+#user-selection button:hover {
+    transform: translateY(-6px) scale(1.1);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Horizontal Book Display Styles */
+.department-container {
+    margin-bottom: 25px;
+}
+
+.department-title {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+    color: var(--secondary-color);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.15);
+    transition: color 0.4s ease, transform 0.3s ease;
+    /* Peak Transition */
+}
+
+.department-title:hover {
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.book-list-horizontal {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 20px;
+    /* Add some space for the scrollbar */
+    transition: transform 0.3s ease;
+}
+
+.book-list-horizontal:hover {
+    transform: scale(1.03);
+}
+
+.book-item {
+    background-color: #fff9c4;
+    /* Light Yellow */
+    border: 2px solid #ffee58;
+    /* Yellow Accent */
+    border-radius: 12px;
+    padding: 20px;
+    margin-right: 20px;
+    width: 280px;
+    /* Adjust as needed */
+    flex: 0 0 auto;
+    /* Prevent items from shrinking */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Enhanced Shadow */
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55), box-shadow 0.3s ease;
+    /* Peak Transition */
+}
+
+.book-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.book-item:last-child {
+    margin-right: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .book-item {
+        width: 90%;
+        /* Adjust for smaller screens */
+    }
+}
+
+.libro-heading {
+    font-family: 'Poppins', ;
+    font-weight: 700;
+    font-size: 2em;
+    /* Adjust size as needed */
+    line-height: 1.2;
+    /* Adjust line height for spacing */
+}
+
+.tagline {
+    font-size: 0.8em;
+    /* Adjust size as needed */
+    font-family: 'Poppins';
+    /* Or another suitable font */
+}
