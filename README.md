@@ -50,8 +50,8 @@ A browser‑only library app with **Student** and **Librarian** flows. No backen
 ### 1) Clone
 
 ```bash
-git clone https://github.com/coach-24/<repo-name>.git
-cd <repo-name>
+git clone https://github.com/coach-24/LIBRARY_MANAGEMENT_SYSTEM .git
+cd LIBRARY_MANAGEMENT_SYSTEM 
 ```
 
 ### 2) Run locally
